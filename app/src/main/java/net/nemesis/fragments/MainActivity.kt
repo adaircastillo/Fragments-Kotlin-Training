@@ -12,5 +12,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val fragmentFreezer = FreezerFragment()
+
+        val parameters = Bundle()
+        parameters.putSerializable("phase", FreezerPhase.Phase3)
+        fragmentFreezer.arguments = parameters
+
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.frame_freezer, fragmentFreezer)
+        transaction.commit()
     }
 }

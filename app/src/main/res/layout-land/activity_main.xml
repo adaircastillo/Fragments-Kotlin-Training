@@ -18,13 +18,24 @@
         app:srcCompat="@drawable/bg_dragon_ball" />
 
 
+    <fragment
+        android:id="@+id/fragment_freezer"
+        android:name="net.nemesis.fragments.FreezerFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@id/frame_freezer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        tools:layout="@layout/fragment_freezer" />
+
     <FrameLayout
         android:id="@+id/frame_freezer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fragment_freezer"
         app:layout_constraintTop_toTopOf="parent">
 
     </FrameLayout>
